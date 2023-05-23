@@ -1,0 +1,66 @@
+abstract class Car {
+    abstract void engine();
+    abstract void drive();
+    abstract void parking();
+}
+
+class Toyota extends Car {
+    public void engine() {
+        System.out.println("Легковой автомобиль завелся.");
+    }
+
+    public void drive() {
+        System.out.println("Автомобиль лекго и плавно едет.");
+    }
+
+    public void parking() {
+        System.out.println("Автомобиль паркуется на парковке.");
+    }
+}
+
+class Kamaz extends Car {
+    public void engine() {
+        System.out.println("Камаз с грохотом заводится.");
+    }
+
+    public void drive() {
+        System.out.println("Камаз скрипя едет.");
+    }
+
+    public void parking() {
+        System.out.println("Камаз припарковался на стройке.");
+    }
+}
+
+class Lexus extends Toyota {
+    public void engine() {
+        System.out.println("Лексус завелся с ревом.");
+    }
+    public void drive() {
+        System.out.println("Лексус едет очень быстро.");
+    }
+
+    public void parking() {
+        System.out.println("Лексус припарковался на роскошной вилле.");
+    }
+}
+
+public class CarProgram {
+    public static void main(String[] args) {
+        Toyota toyota = new Toyota();
+        Kamaz kamaz = new Kamaz();
+        Lexus lexus = new Lexus();
+
+        toyota.engine();
+        toyota.drive();
+        toyota.parking();
+
+        kamaz.engine();
+        kamaz.drive();
+        kamaz.parking();
+
+        lexus.engine();
+        lexus.drive();
+        lexus.parking();
+    }
+}
